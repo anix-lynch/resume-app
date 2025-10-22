@@ -1,0 +1,66 @@
+{
+    "mcpServers": {
+        "github": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-github"
+            ],
+            "env": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+            }
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/Users/anixlynch/dev"
+            ]
+        },
+        "sequentialthinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ]
+        },
+        "context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ]
+        }
+    },
+    "tools": {
+        "docker": {
+            "description": "Docker operations for local testing",
+            "commands": [
+                "build",
+                "run",
+                "logs",
+                "rm",
+                "healthcheck"
+            ]
+        },
+        "huggingface": {
+            "description": "Hugging Face Spaces deployment",
+            "commands": [
+                "create_space",
+                "push",
+                "status",
+                "logs"
+            ]
+        },
+        "vercel": {
+            "description": "Vercel deployment operations",
+            "commands": [
+                "link",
+                "deploy",
+                "logs",
+                "set_env"
+            ]
+        }
+    }
+}
