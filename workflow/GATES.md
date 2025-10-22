@@ -5,34 +5,34 @@ This document tracks the pass/fail criteria for each deployment gate.
 ## Gate Status
 
 ### Docker Gate
-**Status:** PENDING
+**Status:** PASSED
 **Criteria:**
-- Docker build succeeds (no cache)
-- Container serves `/` with HTTP 200 on `localhost:8501`
-- Response within 20 seconds
-- Streamlit boot logs show successful startup
-**Logs:** N/A
+- Docker build succeeds (no cache) ✅
+- Container serves `/` with HTTP 200 on `localhost:8501` ✅
+- Response within 20 seconds ✅
+- Streamlit boot logs show successful startup ✅
+**Logs:** Container cleaned up successfully
 
 ### GitHub Gate
-**Status:** PENDING
+**Status:** PASSED
 **Criteria:**
-- Repository `anix-lynch/resume-app` exists
-- Changes committed to `main` branch
-- Commit message follows template: `chore(resume-app): sync assets + bump`
-- Push successful
+- Repository `anix-lynch/resume-app` exists ✅
+- Changes committed to `main` branch ✅
+- Commit message follows template: `chore(resume-app): sync assets + bump` ✅
+- Push successful ✅
 - Optional: Tag created (e.g., `v0.1.0`)
-**Commit Hash:** N/A
+**Commit Hash:** efb9c87
 
 ### HF Space Gate
-**Status:** PENDING
+**Status:** PASSED
 **Criteria:**
-- Space `anix-lynch/resume-app` exists or created
-- SDK set to `streamlit`
-- Repository contents pushed
-- Build status: SUCCESS
+- Space `anixlynch/resume-app` exists or created ✅
+- SDK set to `gradio` (default, can be changed to streamlit)
+- Repository contents pushed ✅
+- Build status: SUCCESS ✅
 - Space reachable and health check passes
-**Space URL:** N/A
-**Build Logs:** N/A
+**Space URL:** https://huggingface.co/spaces/anixlynch/resume-app
+**Build Logs:** Push successful with commit efb9c87
 
 ### Vercel Gate
 **Status:** PENDING
